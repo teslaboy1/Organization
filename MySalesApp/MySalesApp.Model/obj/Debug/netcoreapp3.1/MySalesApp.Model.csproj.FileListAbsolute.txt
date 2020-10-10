@@ -1,0 +1,8 @@
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\bin\Debug\netcoreapp3.1\MySalesApp.Model.deps.json
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\bin\Debug\netcoreapp3.1\MySalesApp.Model.dll
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\bin\Debug\netcoreapp3.1\MySalesApp.Model.pdb
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\obj\Debug\netcoreapp3.1\MySalesApp.Model.AssemblyInfoInputs.cache
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\obj\Debug\netcoreapp3.1\MySalesApp.Model.AssemblyInfo.cs
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\obj\Debug\netcoreapp3.1\MySalesApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\obj\Debug\netcoreapp3.1\MySalesApp.Model.dll
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Model\obj\Debug\netcoreapp3.1\MySalesApp.Model.pdb

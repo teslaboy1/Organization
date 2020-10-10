@@ -1,0 +1,14 @@
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.Service.deps.json
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.Service.dll
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.Service.pdb
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.DataAccess.dll
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.Model.dll
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.DataAccess.pdb
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\bin\Debug\netcoreapp3.1\MySalesApp.Model.pdb
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.csprojAssemblyReference.cache
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.AssemblyInfoInputs.cache
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.AssemblyInfo.cs
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.csproj.CoreCompileInputs.cache
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.csproj.CopyComplete
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.dll
+C:\Users\baidy\Downloads\MySalesApp\MySalesApp\MySalesApp.Service\obj\Debug\netcoreapp3.1\MySalesApp.Service.pdb

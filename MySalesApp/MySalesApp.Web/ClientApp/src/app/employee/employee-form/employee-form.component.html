@@ -1,0 +1,51 @@
+<div class="form-container">
+  <mat-toolbar color="basic">{{action}} Employee</mat-toolbar>
+  <form class="employee-form" [formGroup]="employeeForm">
+    <mat-form-field appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName" [(ngModel)]="selectedEmployee.firstName" placeholder="First Name" required >
+      <mat-error *ngIf="employeeForm.controls['firstName'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Middle Name</mat-label>
+      <input matInput formControlName="middleName" [(ngModel)]="selectedEmployee.middleName" placeholder="Middle Name" required >
+      <mat-error *ngIf="employeeForm.controls['middleName'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Surname</mat-label>
+      <input matInput formControlName="surname" [(ngModel)]="selectedEmployee.surname" placeholder="Surname" required >
+      <mat-error *ngIf="employeeForm.controls['surname'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput formControlName="city" [(ngModel)]="selectedEmployee.city" placeholder="City" required >
+      <mat-error *ngIf="employeeForm.controls['city'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" [(ngModel)]="selectedEmployee.email" placeholder="Email" required >
+      <mat-error *ngIf="employeeForm.controls['email'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" [(ngModel)]="selectedEmployee.phone" placeholder="Phone" required >
+      <mat-error *ngIf="employeeForm.controls['phone'].errors?.required">Invalid form value</mat-error>
+      <mat-error *ngIf="employeeForm.controls['phone'].errors?.pattern">Please enter valid data</mat-error>
+    </mat-form-field>
+    <!--<mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="insertPersonId" [(ngModel)]="selectedCustomer.insertPersonId" placeholder="Person Id" required >
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.required">Invalid form value</mat-error>
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.pattern">Please enter valid data</mat-error>
+    </mat-form-field>-->
+    <mat-form-field appearance="fill">
+      <mat-label>Person Id</mat-label>
+      <input matInput formControlName="insertPersonId" [(ngModel)]="selectedEmployee.insertPersonId" placeholder="Person Id" required >
+      <mat-error *ngIf="employeeForm.controls['insertPersonId'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="customerForm.invalid">Save</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Close</button>
+  </div>
+</div>
