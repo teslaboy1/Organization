@@ -1,10 +1,10 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { MvEmployee, MvAddEmployee } from './employee.model';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { MatTableDataSource } from '@angular/material/table';
-import { UtilityService } from 'src/core/services/utility.service';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { UtilityService } from 'src/core/services/utility.service';
 import { EmployeeService } from './employee.service';
 
 @Component({
@@ -16,8 +16,8 @@ export class EmployeeComponent implements OnInit {
 
   displayedColumns: string[];
   dataSource: MatTableDataSource<MvEmployee>;
-  errorMessage = '';
   selectedEmployee: MvAddEmployee = <MvAddEmployee>{};
+  errorMessage = '';
   selection = new SelectionModel<MvEmployee>(false, []);
 
   constructor(private employeeService: EmployeeService,
@@ -35,23 +35,23 @@ export class EmployeeComponent implements OnInit {
         this.dataSource = new MatTableDataSource<MvEmployee>(response.data);
       } else {
         this.dataSource = new MatTableDataSource<MvEmployee>();
-        this.errorMessage = 'No data';
+        this.errorMessage = 'No Employees';
       }
     });
   }
 
-  onAdd() {
+  Add() {
     this.selection.clear();
     this.selectedEmployee = <MvEmployee>{};
     this.openDialog('Add');
   }
-  onEdit() {
+  Edit() {
     this.openDialog('Edit');
   }
 
   openDialog(action: string) {
     if (action === 'Edit' && !this.selection.hasValue()){
-      this.utilityService.openSnackBar('Please Select Row first', 'warn');
+      this.utilityService.openSnackBar('Select any Row', 'warn');
       return;
     }
     const dialogConfig = new MatDialogConfig();
@@ -66,13 +66,13 @@ export class EmployeeComponent implements OnInit {
       if (result) {
         if (action === 'Edit') {
           this.employeeService.editEmployee(result).subscribe(res => {
-            this.utilityService.openSnackBar('Employee Edited', 'success');
+            this.utilityService.openSnackBar('Edit Successful', 'success');
             this.getAllEmployee();
           });
 
         } else {
           this.employeeService.addEmployee(result).subscribe(res => {
-            this.utilityService.openSnackBar('Employee added successfully', 'success');
+            this.utilityService.openSnackBar('Add successful', 'success');
             this.getAllEmployee();
           });
         }

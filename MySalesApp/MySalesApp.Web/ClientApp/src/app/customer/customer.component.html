@@ -1,9 +1,6 @@
+<h1>Customer Section!</h1>
 <div class="customer-table">
-  <button mat-raised-button (click)="onAdd()">Add</button>
-  <!--<button mat-raised-button (click)="onEdit()">Edit</button>-->
-  <mat-error *ngIf="errorMessage != ''">
-    {{errorMessage}}
-  </mat-error>
+  <button mat-raised-button (click)="Add()">Add Customer</button>
   <mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource">
     <ng-container matColumnDef="customerId">
       <mat-header-cell *matHeaderCellDef> Customer Id </mat-header-cell>

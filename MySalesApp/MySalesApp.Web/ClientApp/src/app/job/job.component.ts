@@ -1,10 +1,10 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { MvJob, MvAddJob } from './job.model';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { MatTableDataSource } from '@angular/material/table';
-import { UtilityService } from 'src/core/services/utility.service';
 import { JobFormComponent } from './job-form/job-form.component';
+import { UtilityService } from 'src/core/services/utility.service';
 import { JobService } from './job.service';
 
 @Component({
@@ -16,8 +16,8 @@ export class JobComponent implements OnInit {
 
   displayedColumns: string[];
   dataSource: MatTableDataSource<MvJob>;
-  errorMessage = '';
   selectedJob: MvAddJob = <MvAddJob>{};
+  errorMessage = '';
   selection = new SelectionModel<MvJob>(false, []);
 
   constructor(private jobService: JobService,
@@ -35,23 +35,23 @@ export class JobComponent implements OnInit {
         this.dataSource = new MatTableDataSource<MvJob>(response.data);
       } else {
         this.dataSource = new MatTableDataSource<MvJob>();
-        this.errorMessage = 'No data';
+        this.errorMessage = 'No Jobs';
       }
     });
   }
 
-  onAdd() {
+  Add() {
     this.selection.clear();
     this.selectedJob = <MvJob>{};
     this.openDialog('Add');
   }
-  onEdit() {
+  Edit() {
     this.openDialog('Edit');
   }
 
   openDialog(action: string) {
     if (action === 'Edit' && !this.selection.hasValue()) {
-      this.utilityService.openSnackBar('Please Select Row first', 'warn');
+      this.utilityService.openSnackBar('Select any Row', 'warn');
       return;
     }
     const dialogConfig = new MatDialogConfig();
@@ -66,13 +66,13 @@ export class JobComponent implements OnInit {
       if (result) {
         if (action === 'Edit') {
           this.jobService.editJob(result).subscribe(res => {
-            this.utilityService.openSnackBar('Job Edited', 'success');
+            this.utilityService.openSnackBar('Edit Successful', 'success');
             this.getAllJob();
           });
 
         } else {
           this.jobService.addJob(result).subscribe(res => {
-            this.utilityService.openSnackBar('Job added successfully', 'success');
+            this.utilityService.openSnackBar('Added Successful', 'success');
             this.getAllJob();
           });
         }
