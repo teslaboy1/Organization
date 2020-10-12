@@ -1,0 +1,35 @@
+<div class="form-container">
+  <mat-toolbar color="basic">{{action}} Assignment</mat-toolbar>
+  <form class="assignment-form" [formGroup]="assignmentForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Employee Id</mat-label>
+      <input matInput formControlName="employeeId" [(ngModel)]="selectedAssignment.employeeId" placeholder="Employee Id" required >
+      <mat-error *ngIf="assignmentForm.controls['employeeId'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Job Id</mat-label>
+      <input matInput formControlName="jobId" [(ngModel)]="selectedAssignment.jobId" placeholder="Job Id" required >
+      <mat-error *ngIf="assignmentForm.controls['jobId'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Status</mat-label>
+      <input matInput formControlName="status" [(ngModel)]="selectedAssignment.status" placeholder="Status" required >
+      <mat-error *ngIf="assignmentForm.controls['status'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <!--<mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="insertPersonId" [(ngModel)]="selectedCustomer.insertPersonId" placeholder="Person Id" required >
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.required">Invalid form value</mat-error>
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.pattern">Please enter valid data</mat-error>
+    </mat-form-field>-->
+    <mat-form-field appearance="fill">
+      <mat-label>Person Id</mat-label>
+      <input matInput formControlName="insertPersonId" [(ngModel)]="selectedAssignment.insertPersonId" placeholder="Person Id" required >
+      <mat-error *ngIf="assignmentForm.controls['insertPersonId'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="basic" (click)="onSubmit()" [disabled]="assignmentForm.invalid">Save</button>
+    <button mat-raised-button color="basic" (click)="onClose()">Close</button>
+  </div>
+</div>

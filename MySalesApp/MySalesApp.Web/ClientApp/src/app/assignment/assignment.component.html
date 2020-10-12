@@ -1,0 +1,37 @@
+<h1>Assignment Section!</h1>
+<div class="Assignment-table">
+  <button mat-raised-button (click)="Add()">Add Assignment!</button>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource">
+    <ng-container matColumnDef="assignmentId">
+      <mat-header-cell *matHeaderCellDef> Assignment Id </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.assignmentId}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="organizationName">
+      <mat-header-cell *matHeaderCellDef> Organization Name </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.organizationName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.firstName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="middleName">
+      <mat-header-cell *matHeaderCellDef> Middle Name </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.middleName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="surname">
+      <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.surname}} </mat-cell>
+    </ng-container>
+    <!--<ng-container matColumnDef="insertPersonId">
+      <mat-header-cell *matHeaderCellDef> Person Id </mat-header-cell>
+      <mat-cell *matCellDef="let CustomerDetail"> {{CustomerDetail.insertPersonId}} </mat-cell>
+    </ng-container>-->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selectRow($event, row)"
+      [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}"
+      (mouseover)="row.hovered = true" (mouseout)="row.hovered = false">
+    </mat-row>
+  </mat-table>
+</div>

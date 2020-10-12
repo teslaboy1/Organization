@@ -10,7 +10,8 @@ namespace MySalesApp.Service.Assignment
     public interface IAssignmentService
     {
         bool AddAssignment(MvAddAssignment assignment);
-        //dynamic GetAllAssignmentDetail();
+
+        dynamic GetAllAssignmentDetail();
 
     }
 }

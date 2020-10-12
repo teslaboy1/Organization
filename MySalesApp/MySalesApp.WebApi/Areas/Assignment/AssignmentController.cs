@@ -22,7 +22,7 @@ namespace MySalesApp.WebApi.Areas.Assignment
             _assignmentService = assignmentService;
         }
 
- /*       [HttpGet]
+        [HttpGet]
         public IActionResult AllAssignmentDetail()
         {
             try
@@ -35,7 +35,7 @@ namespace MySalesApp.WebApi.Areas.Assignment
                 throw ex;
             }
         }
- */
+ 
         [HttpPost]
         public IActionResult AddAssignment([FromBody] MvAddAssignment assignment)
         {

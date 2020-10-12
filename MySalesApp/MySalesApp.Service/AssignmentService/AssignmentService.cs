@@ -33,13 +33,13 @@ namespace MySalesApp.Service.Assignment
 
             _commandTimeout = Convert.ToInt32(connectionString["CommandTimeout"]);
         }
-/*        public dynamic GetAllAssignmentDetail()
+        public dynamic GetAllAssignmentDetail()
         {
             using (var con = _da.GetConnection())
             {
                 var cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SpAllEmployeeDetailSel";
+                cmd.CommandText = "SpAllAssignmentDetailSel";
                 cmd.CommandTimeout = _commandTimeout;
 
                 using (SqlDataReader redr = cmd.ExecuteReader())
@@ -64,7 +64,7 @@ namespace MySalesApp.Service.Assignment
 
             }
         }
-*/
+
         public bool AddAssignment(MvAddAssignment assignment)
         {
             using (var con = _da.GetConnection())

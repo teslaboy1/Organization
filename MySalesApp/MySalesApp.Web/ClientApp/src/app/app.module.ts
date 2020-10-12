@@ -11,6 +11,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { JobComponent } from './job/job.component';
+import { AssignmentComponent } from './assignment/assignment.component';
 
 
 const appRoutes: Routes = [
@@ -26,13 +27,17 @@ const appRoutes: Routes = [
   {
     path: 'job',
     loadChildren: () => import('./job/job.module').then(m => m.JobModule)
+  },
+  {
+    path: 'assignment',
+    loadChildren: () => import('./assignment/assignment.module').then(m => m.AssignmentModule)
   }
 
 
 ];
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     NavMenuComponent,
     HomeComponent

@@ -25,7 +25,7 @@ export class JobComponent implements OnInit {
     private utilityService: UtilityService) { }
 
   ngOnInit(): void {
-    this.displayedColumns = ['jobId', 'jobDescription', 'organizationName'];
+    this.displayedColumns = ['jobId', 'organizationName', 'jobDescription'];
     this.getAllJob();
   }
 

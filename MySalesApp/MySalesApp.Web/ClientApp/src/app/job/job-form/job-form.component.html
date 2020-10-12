@@ -7,7 +7,7 @@
       <mat-error *ngIf="jobForm.controls['organizationId'].errors?.required">Invalid form value</mat-error>
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>City</mat-label>
+      <mat-label>Job Description</mat-label>
       <input matInput formControlName="jobDescription" [(ngModel)]="selectedJob.jobDescription" placeholder="Job Description" required >
       <mat-error *ngIf="jobForm.controls['jobDescription'].errors?.required">Invalid form value</mat-error>
     </mat-form-field>
